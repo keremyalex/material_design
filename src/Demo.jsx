@@ -70,7 +70,7 @@ export default function Demo() {
                         Demostración de Material Design
                     </Typography>
                     <Box component="span" sx={{ cursor: 'pointer' }} onClick={toggleColorMode}>
-                        <Typography variant="body2">Toggle theme</Typography>
+                        <Typography variant="body2">Cambiar Tema</Typography>
                     </Box>
                 </Toolbar>
             </AppBar>
