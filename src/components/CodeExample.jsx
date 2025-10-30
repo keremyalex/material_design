@@ -9,8 +9,8 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-export default function CodeExample({ code, language = 'jsx', orientation = 'side', children, title }) {
-    const [showCode, setShowCode] = useState(true)
+export default function CodeExample({ code, language = 'jsx', orientation = 'side', children, title, defaultShow = false }) {
+    const [showCode, setShowCode] = useState(!!defaultShow)
 
     const copy = async () => {
         try {

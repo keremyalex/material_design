@@ -19,6 +19,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle'
 import MailIcon from '@mui/icons-material/Mail'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import MoreIcon from '@mui/icons-material/MoreVert'
+import CodeExample from './CodeExample'
 
 export default function AppBarDemo() {
     const [progress, setProgress] = useState(75)
@@ -36,111 +37,225 @@ export default function AppBarDemo() {
                 {/* AppBar básica */}
                 <Box sx={{ mb: 3 }}>
                     <Typography variant="subtitle1" gutterBottom>AppBar básica</Typography>
-                    <AppBar position="static" sx={{ mb: 2 }}>
-                        <Toolbar>
-                            <IconButton edge="start" color="inherit" aria-label="menu">
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                                Aplicación Demo
-                            </Typography>
-                            <Button color="inherit">Login</Button>
-                        </Toolbar>
-                    </AppBar>
+                    <CodeExample
+                        title="AppBar básica"
+                        orientation="side"
+                        defaultShow={false}
+                        code={`<AppBar position="static" sx={{ mb: 2 }}>
+  <Toolbar>
+      <IconButton edge="start" color="inherit" aria-label="menu">
+          <MenuIcon />
+      </IconButton>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Aplicación Demo
+      </Typography>
+      <Button color="inherit">Login</Button>
+  </Toolbar>
+</AppBar>`}
+                    >
+                        <AppBar position="static" sx={{ mb: 2 }}>
+                            <Toolbar>
+                                <IconButton edge="start" color="inherit" aria-label="menu">
+                                    <MenuIcon />
+                                </IconButton>
+                                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                                    Aplicación Demo
+                                </Typography>
+                                <Button color="inherit">Login</Button>
+                            </Toolbar>
+                        </AppBar>
+                    </CodeExample>
                 </Box>
 
                 {/* AppBar con iconos y badges */}
                 <Box sx={{ mb: 3 }}>
                     <Typography variant="subtitle1" gutterBottom>AppBar con iconos y notificaciones</Typography>
-                    <AppBar position="static" sx={{ mb: 2 }}>
-                        <Toolbar>
-                            <IconButton edge="start" color="inherit" aria-label="menu">
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                                Dashboard
-                            </Typography>
-                            <IconButton color="inherit">
-                                <Badge badgeContent={4} color="error">
-                                    <MailIcon />
-                                </Badge>
-                            </IconButton>
-                            <IconButton color="inherit">
-                                <Badge badgeContent={17} color="error">
-                                    <NotificationsIcon />
-                                </Badge>
-                            </IconButton>
-                            <IconButton edge="end" color="inherit">
-                                <AccountCircle />
-                            </IconButton>
-                        </Toolbar>
-                    </AppBar>
+                    <CodeExample
+                        title="AppBar con badges"
+                        orientation="side"
+                        defaultShow={false}
+                        code={`<AppBar position="static" sx={{ mb: 2 }}>
+  <Toolbar>
+      <IconButton edge="start" color="inherit" aria-label="menu">
+          <MenuIcon />
+      </IconButton>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Dashboard
+      </Typography>
+      <IconButton color="inherit">
+          <Badge badgeContent={4} color="error">
+              <MailIcon />
+          </Badge>
+      </IconButton>
+      <IconButton color="inherit">
+          <Badge badgeContent={17} color="error">
+              <NotificationsIcon />
+          </Badge>
+      </IconButton>
+      <IconButton edge="end" color="inherit">
+          <AccountCircle />
+      </IconButton>
+  </Toolbar>
+</AppBar>`}
+                    >
+                        <AppBar position="static" sx={{ mb: 2 }}>
+                            <Toolbar>
+                                <IconButton edge="start" color="inherit" aria-label="menu">
+                                    <MenuIcon />
+                                </IconButton>
+                                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                                    Dashboard
+                                </Typography>
+                                <IconButton color="inherit">
+                                    <Badge badgeContent={4} color="error">
+                                        <MailIcon />
+                                    </Badge>
+                                </IconButton>
+                                <IconButton color="inherit">
+                                    <Badge badgeContent={17} color="error">
+                                        <NotificationsIcon />
+                                    </Badge>
+                                </IconButton>
+                                <IconButton edge="end" color="inherit">
+                                    <AccountCircle />
+                                </IconButton>
+                            </Toolbar>
+                        </AppBar>
+                    </CodeExample>
                 </Box>
 
                 {/* AppBar con barra de búsqueda */}
                 <Box sx={{ mb: 3 }}>
                     <Typography variant="subtitle1" gutterBottom>AppBar con búsqueda</Typography>
-                    <AppBar position="static" sx={{ mb: 2 }}>
-                        <Toolbar>
-                            <IconButton edge="start" color="inherit" aria-label="menu">
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography variant="h6" component="div" sx={{ mr: 2 }}>
-                                Buscar
-                            </Typography>
-                            <Box sx={{
-                                position: 'relative',
-                                borderRadius: 1,
-                                backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                                '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.25)' },
-                                marginLeft: 0,
-                                width: '100%',
-                                maxWidth: '400px'
-                            }}>
+                    <CodeExample
+                        title="AppBar con búsqueda"
+                        orientation="side"
+                        defaultShow={false}
+                        code={`<AppBar position="static" sx={{ mb: 2 }}>
+  <Toolbar>
+      <IconButton edge="start" color="inherit" aria-label="menu">
+          <MenuIcon />
+      </IconButton>
+      <Typography variant="h6" component="div" sx={{ mr: 2 }}>
+          Buscar
+      </Typography>
+      <Box sx={{
+          position: 'relative',
+          borderRadius: 1,
+          backgroundColor: 'rgba(255, 255, 255, 0.15)',
+          '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.25)' },
+          marginLeft: 0,
+          width: '100%',
+          maxWidth: '400px'
+      }}>
+          <Box sx={{
+              padding: '0 16px',
+              height: '100%',
+              position: 'absolute',
+              pointerEvents: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+          }}>
+              <SearchIcon />
+          </Box>
+          <input
+              placeholder="Buscar..."
+              style={{
+                  color: 'inherit',
+                  width: '100%',
+                  padding: '8px 8px 8px 48px',
+                  border: 'none',
+                  background: 'transparent',
+                  outline: 'none'
+              }}
+          />
+      </Box>
+      <IconButton color="inherit" sx={{ ml: 'auto' }}>
+          <MoreIcon />
+      </IconButton>
+  </Toolbar>
+</AppBar>`}
+                    >
+                        <AppBar position="static" sx={{ mb: 2 }}>
+                            <Toolbar>
+                                <IconButton edge="start" color="inherit" aria-label="menu">
+                                    <MenuIcon />
+                                </IconButton>
+                                <Typography variant="h6" component="div" sx={{ mr: 2 }}>
+                                    Buscar
+                                </Typography>
                                 <Box sx={{
-                                    padding: '0 16px',
-                                    height: '100%',
-                                    position: 'absolute',
-                                    pointerEvents: 'none',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
+                                    position: 'relative',
+                                    borderRadius: 1,
+                                    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                                    '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.25)' },
+                                    marginLeft: 0,
+                                    width: '100%',
+                                    maxWidth: '400px'
                                 }}>
-                                    <SearchIcon />
+                                    <Box sx={{
+                                        padding: '0 16px',
+                                        height: '100%',
+                                        position: 'absolute',
+                                        pointerEvents: 'none',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
+                                    }}>
+                                        <SearchIcon />
+                                    </Box>
+                                    <input
+                                        placeholder="Buscar..."
+                                        style={{
+                                            color: 'inherit',
+                                            width: '100%',
+                                            padding: '8px 8px 8px 48px',
+                                            border: 'none',
+                                            background: 'transparent',
+                                            outline: 'none'
+                                        }}
+                                    />
                                 </Box>
-                                <input
-                                    placeholder="Buscar..."
-                                    style={{
-                                        color: 'inherit',
-                                        width: '100%',
-                                        padding: '8px 8px 8px 48px',
-                                        border: 'none',
-                                        background: 'transparent',
-                                        outline: 'none'
-                                    }}
-                                />
-                            </Box>
-                            <IconButton color="inherit" sx={{ ml: 'auto' }}>
-                                <MoreIcon />
-                            </IconButton>
-                        </Toolbar>
-                    </AppBar>
+                                <IconButton color="inherit" sx={{ ml: 'auto' }}>
+                                    <MoreIcon />
+                                </IconButton>
+                            </Toolbar>
+                        </AppBar>
+                    </CodeExample>
                 </Box>
 
                 {/* AppBar con progress */}
                 <Box sx={{ mb: 3 }}>
                     <Typography variant="subtitle1" gutterBottom>AppBar con indicador de progreso</Typography>
-                    <AppBar position="static" sx={{ mb: 2 }}>
-                        <Toolbar>
-                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                                Cargando contenido...
-                            </Typography>
-                            <Typography variant="body2" sx={{ mr: 2 }}>
-                                {progress}%
-                            </Typography>
-                        </Toolbar>
-                        <LinearProgress variant="determinate" value={progress} />
-                    </AppBar>
+                    <CodeExample
+                        title="AppBar con progreso"
+                        orientation="side"
+                        defaultShow={false}
+                        code={`<AppBar position="static" sx={{ mb: 2 }}>
+  <Toolbar>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Cargando contenido...
+      </Typography>
+      <Typography variant="body2" sx={{ mr: 2 }}>
+          {progress}%
+      </Typography>
+  </Toolbar>
+  <LinearProgress variant="determinate" value={progress} />
+</AppBar>`}
+                    >
+                        <AppBar position="static" sx={{ mb: 2 }}>
+                            <Toolbar>
+                                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                                    Cargando contenido...
+                                </Typography>
+                                <Typography variant="body2" sx={{ mr: 2 }}>
+                                    {progress}%
+                                </Typography>
+                            </Toolbar>
+                            <LinearProgress variant="determinate" value={progress} />
+                        </AppBar>
+                    </CodeExample>
                 </Box>
             </Box>
 

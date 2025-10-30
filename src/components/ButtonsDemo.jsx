@@ -48,6 +48,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Variantes básicas"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<Stack direction="row" spacing={2}>
   <Button variant="contained">Contained</Button>
   <Button variant="outlined">Outlined</Button>
@@ -70,6 +71,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Botones - Colores"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<Stack direction="row" spacing={2}>
   <Button variant="contained" color="primary">Primary</Button>
   <Button variant="contained" color="secondary">Secondary</Button>
@@ -98,6 +100,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Botones - Tamaños"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<Stack direction="row" spacing={2}>
   <Button size="small" variant="contained">Small</Button>
   <Button size="medium" variant="contained">Medium</Button>
@@ -120,6 +123,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Botones con iconos"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<Stack direction="row" spacing={2}>
   <Button variant="contained" startIcon={<SendIcon />}>Enviar</Button>
   <Button variant="contained" endIcon={<SaveIcon />}>Guardar</Button>
@@ -144,6 +148,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Icon Buttons"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<Stack direction="row" spacing={2}>
   <IconButton color="primary"><DeleteIcon/></IconButton>
   <IconButton color="secondary"><FavoriteIcon/></IconButton>
@@ -176,6 +181,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="FABs"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<Stack direction="row" spacing={2}>
   <Fab color="primary"><AddIcon/></Fab>
   <Fab color="secondary"><EditIcon/></Fab>
@@ -205,6 +211,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Loading Buttons"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<LoadingButton loading={loading}
   variant="contained">
   Cargar datos
@@ -247,6 +254,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Button Groups"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<ButtonGroup variant="contained">
   <Button>Uno</Button>
   <Button>Dos</Button>
@@ -276,6 +284,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Toggle Buttons"
                     orientation="side"
+                    defaultShow={false}
                     code={`<ToggleButtonGroup
   value={formats}
   onChange={handleFormatChange}
@@ -317,6 +326,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Botones deshabilitados"
                     orientation="side"
+                    defaultShow={false}
                     code={`<Stack direction="row" spacing={2} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
   <Button variant="contained" disabled>
       Deshabilitado
@@ -351,6 +361,7 @@ export default function ButtonsDemo() {
                 <CodeExample
                     title="Botón de upload"
                     orientation="side"
+                                        defaultShow={false}
                     code={`<Button
   component="label"
   variant="contained"
