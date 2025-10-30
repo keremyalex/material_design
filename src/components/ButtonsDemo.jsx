@@ -10,6 +10,7 @@ import ToggleButton from '@mui/material/ToggleButton'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
+import CodeExample from './CodeExample'
 import DeleteIcon from '@mui/icons-material/Delete'
 import SendIcon from '@mui/icons-material/Send'
 import SaveIcon from '@mui/icons-material/Save'
@@ -40,14 +41,25 @@ export default function ButtonsDemo() {
                 Botones - Material Design
             </Typography>
 
-            {/* Variantes básicas */}
+            {/* Variantes básicas con código */}
             <Box>
                 <Typography variant="h6" gutterBottom>Variantes básicas</Typography>
-                <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
-                    <Button variant="contained">Contained</Button>
-                    <Button variant="outlined">Outlined</Button>
-                    <Button variant="text">Text</Button>
-                </Stack>
+                {/* Importante: el código a mostrar debe reflejar el JSX de ejemplo. */}
+                <CodeExample
+                    title="Variantes básicas"
+                    orientation="side"
+                    code={`<Stack direction="row" spacing={2}>
+  <Button variant="contained">Contained</Button>
+  <Button variant="outlined">Outlined</Button>
+  <Button variant="text">Text</Button>
+</Stack>`}
+                >
+                    <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
+                        <Button variant="contained">Contained</Button>
+                        <Button variant="outlined">Outlined</Button>
+                        <Button variant="text">Text</Button>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -55,14 +67,27 @@ export default function ButtonsDemo() {
             {/* Colores */}
             <Box>
                 <Typography variant="h6" gutterBottom>Colores</Typography>
-                <Stack direction="row" spacing={2} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
-                    <Button variant="contained" color="primary">Primary</Button>
-                    <Button variant="contained" color="secondary">Secondary</Button>
-                    <Button variant="contained" color="success">Success</Button>
-                    <Button variant="contained" color="error">Error</Button>
-                    <Button variant="contained" color="warning">Warning</Button>
-                    <Button variant="contained" color="info">Info</Button>
-                </Stack>
+                <CodeExample
+                    title="Botones - Colores"
+                    orientation="side"
+                    code={`<Stack direction="row" spacing={2}>
+  <Button variant="contained" color="primary">Primary</Button>
+  <Button variant="contained" color="secondary">Secondary</Button>
+  <Button variant="contained" color="success">Success</Button>
+  <Button variant="contained" color="error">Error</Button>
+  <Button variant="contained" color="warning">Warning</Button>
+  <Button variant="contained" color="info">Info</Button>
+</Stack>`}
+                >
+                    <Stack direction="row" spacing={2} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
+                        <Button variant="contained" color="primary">Primary</Button>
+                        <Button variant="contained" color="secondary">Secondary</Button>
+                        <Button variant="contained" color="success">Success</Button>
+                        <Button variant="contained" color="error">Error</Button>
+                        <Button variant="contained" color="warning">Warning</Button>
+                        <Button variant="contained" color="info">Info</Button>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -70,11 +95,21 @@ export default function ButtonsDemo() {
             {/* Tamaños */}
             <Box>
                 <Typography variant="h6" gutterBottom>Tamaños</Typography>
-                <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
-                    <Button size="small" variant="contained">Small</Button>
-                    <Button size="medium" variant="contained">Medium</Button>
-                    <Button size="large" variant="contained">Large</Button>
-                </Stack>
+                <CodeExample
+                    title="Botones - Tamaños"
+                    orientation="side"
+                    code={`<Stack direction="row" spacing={2}>
+  <Button size="small" variant="contained">Small</Button>
+  <Button size="medium" variant="contained">Medium</Button>
+  <Button size="large" variant="contained">Large</Button>
+</Stack>`}
+                >
+                    <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
+                        <Button size="small" variant="contained">Small</Button>
+                        <Button size="medium" variant="contained">Medium</Button>
+                        <Button size="large" variant="contained">Large</Button>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -82,14 +117,23 @@ export default function ButtonsDemo() {
             {/* Botones con iconos */}
             <Box>
                 <Typography variant="h6" gutterBottom>Botones con iconos</Typography>
-                <Stack direction="row" spacing={2} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
-                    <Button variant="contained" startIcon={<SendIcon />}>Enviar</Button>
-                    <Button variant="contained" endIcon={<SaveIcon />}>Guardar</Button>
-                    <Button variant="outlined" startIcon={<DeleteIcon />} color="error">
-                        Eliminar
-                    </Button>
-                    <Button variant="text" startIcon={<EditIcon />}>Editar</Button>
-                </Stack>
+                <CodeExample
+                    title="Botones con iconos"
+                    orientation="side"
+                    code={`<Stack direction="row" spacing={2}>
+  <Button variant="contained" startIcon={<SendIcon />}>Enviar</Button>
+  <Button variant="contained" endIcon={<SaveIcon />}>Guardar</Button>
+  <Button variant="outlined" startIcon={<DeleteIcon />} color="error">Eliminar</Button>
+  <Button variant="text" startIcon={<EditIcon />}>Editar</Button>
+</Stack>`}
+                >
+                    <Stack direction="row" spacing={2} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
+                        <Button variant="contained" startIcon={<SendIcon />}>Enviar</Button>
+                        <Button variant="contained" endIcon={<SaveIcon />}>Guardar</Button>
+                        <Button variant="outlined" startIcon={<DeleteIcon />} color="error">Eliminar</Button>
+                        <Button variant="text" startIcon={<EditIcon />}>Editar</Button>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -97,20 +141,31 @@ export default function ButtonsDemo() {
             {/* Icon Buttons */}
             <Box>
                 <Typography variant="h6" gutterBottom>Icon Buttons</Typography>
-                <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
-                    <IconButton color="primary" aria-label="delete">
-                        <DeleteIcon />
-                    </IconButton>
-                    <IconButton color="secondary" aria-label="favorite">
-                        <FavoriteIcon />
-                    </IconButton>
-                    <IconButton color="success" aria-label="add">
-                        <AddIcon />
-                    </IconButton>
-                    <IconButton color="error" aria-label="edit">
-                        <EditIcon />
-                    </IconButton>
-                </Stack>
+                <CodeExample
+                    title="Icon Buttons"
+                    orientation="side"
+                    code={`<Stack direction="row" spacing={2}>
+  <IconButton color="primary"><DeleteIcon/></IconButton>
+  <IconButton color="secondary"><FavoriteIcon/></IconButton>
+  <IconButton color="success"><AddIcon/></IconButton>
+  <IconButton color="error"><EditIcon/></IconButton>
+</Stack>`}
+                >
+                    <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
+                        <IconButton color="primary" aria-label="delete">
+                            <DeleteIcon />
+                        </IconButton>
+                        <IconButton color="secondary" aria-label="favorite">
+                            <FavoriteIcon />
+                        </IconButton>
+                        <IconButton color="success" aria-label="add">
+                            <AddIcon />
+                        </IconButton>
+                        <IconButton color="error" aria-label="edit">
+                            <EditIcon />
+                        </IconButton>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -118,18 +173,28 @@ export default function ButtonsDemo() {
             {/* Floating Action Buttons */}
             <Box>
                 <Typography variant="h6" gutterBottom>Floating Action Buttons (FAB)</Typography>
-                <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
-                    <Fab color="primary" aria-label="add">
-                        <AddIcon />
-                    </Fab>
-                    <Fab color="secondary" aria-label="edit">
-                        <EditIcon />
-                    </Fab>
-                    <Fab variant="extended">
-                        <AddIcon sx={{ mr: 1 }} />
-                        Crear nuevo
-                    </Fab>
-                </Stack>
+                <CodeExample
+                    title="FABs"
+                    orientation="side"
+                    code={`<Stack direction="row" spacing={2}>
+  <Fab color="primary"><AddIcon/></Fab>
+  <Fab color="secondary"><EditIcon/></Fab>
+  <Fab variant="extended"><AddIcon/> Crear nuevo</Fab>
+</Stack>`}
+                >
+                    <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
+                        <Fab color="primary" aria-label="add">
+                            <AddIcon />
+                        </Fab>
+                        <Fab color="secondary" aria-label="edit">
+                            <EditIcon />
+                        </Fab>
+                        <Fab variant="extended">
+                            <AddIcon sx={{ mr: 1 }} />
+                            Crear nuevo
+                        </Fab>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -137,32 +202,41 @@ export default function ButtonsDemo() {
             {/* Loading Buttons */}
             <Box>
                 <Typography variant="h6" gutterBottom>Loading Buttons</Typography>
-                <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
-                    <LoadingButton
-                        loading={loading}
-                        variant="contained"
-                        onClick={handleLoadingClick}
-                    >
-                        Cargar datos
-                    </LoadingButton>
-                    <LoadingButton
-                        loading={loading}
-                        loadingIndicator="Cargando..."
-                        variant="outlined"
-                        onClick={handleLoadingClick}
-                    >
-                        Procesar
-                    </LoadingButton>
-                    <LoadingButton
-                        loading={loading}
-                        loadingPosition="start"
-                        startIcon={<SaveIcon />}
-                        variant="contained"
-                        onClick={handleLoadingClick}
-                    >
-                        Guardar
-                    </LoadingButton>
-                </Stack>
+                <CodeExample
+                    title="Loading Buttons"
+                    orientation="side"
+                    code={`<LoadingButton loading={loading}
+  variant="contained">
+  Cargar datos
+</LoadingButton>`}
+                >
+                    <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
+                        <LoadingButton
+                            loading={loading}
+                            variant="contained"
+                            onClick={handleLoadingClick}
+                        >
+                            Cargar datos
+                        </LoadingButton>
+                        <LoadingButton
+                            loading={loading}
+                            loadingIndicator="Cargando..."
+                            variant="outlined"
+                            onClick={handleLoadingClick}
+                        >
+                            Procesar
+                        </LoadingButton>
+                        <LoadingButton
+                            loading={loading}
+                            loadingPosition="start"
+                            startIcon={<SaveIcon />}
+                            variant="contained"
+                            onClick={handleLoadingClick}
+                        >
+                            Guardar
+                        </LoadingButton>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -170,18 +244,28 @@ export default function ButtonsDemo() {
             {/* Button Groups */}
             <Box>
                 <Typography variant="h6" gutterBottom>Button Groups</Typography>
-                <Stack spacing={2} sx={{ mb: 2 }}>
-                    <ButtonGroup variant="contained" aria-label="outlined primary button group">
-                        <Button>Uno</Button>
-                        <Button>Dos</Button>
-                        <Button>Tres</Button>
-                    </ButtonGroup>
-                    <ButtonGroup variant="outlined" aria-label="outlined button group">
-                        <Button>Izquierda</Button>
-                        <Button>Centro</Button>
-                        <Button>Derecha</Button>
-                    </ButtonGroup>
-                </Stack>
+                <CodeExample
+                    title="Button Groups"
+                    orientation="side"
+                    code={`<ButtonGroup variant="contained">
+  <Button>Uno</Button>
+  <Button>Dos</Button>
+  <Button>Tres</Button>
+</ButtonGroup>`}
+                >
+                    <Stack spacing={2} sx={{ mb: 2 }}>
+                        <ButtonGroup variant="contained" aria-label="outlined primary button group">
+                            <Button>Uno</Button>
+                            <Button>Dos</Button>
+                            <Button>Tres</Button>
+                        </ButtonGroup>
+                        <ButtonGroup variant="outlined" aria-label="outlined button group">
+                            <Button>Izquierda</Button>
+                            <Button>Centro</Button>
+                            <Button>Derecha</Button>
+                        </ButtonGroup>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -189,21 +273,40 @@ export default function ButtonsDemo() {
             {/* Toggle Buttons */}
             <Box>
                 <Typography variant="h6" gutterBottom>Toggle Buttons</Typography>
-                <ToggleButtonGroup
-                    value={formats}
-                    onChange={handleFormatChange}
-                    aria-label="text formatting"
+                <CodeExample
+                    title="Toggle Buttons"
+                    orientation="side"
+                    code={`<ToggleButtonGroup
+  value={formats}
+  onChange={handleFormatChange}
+  aria-label="text formatting">
+  <ToggleButton value="bold" aria-label="bold">
+      <FormatBoldIcon />
+  </ToggleButton>
+  <ToggleButton value="italic" aria-label="italic">
+      <FormatItalicIcon />
+  </ToggleButton>
+  <ToggleButton value="underlined" aria-label="underlined">
+      <FormatUnderlinedIcon />
+  </ToggleButton>
+</ToggleButtonGroup>`}
                 >
-                    <ToggleButton value="bold" aria-label="bold">
-                        <FormatBoldIcon />
-                    </ToggleButton>
-                    <ToggleButton value="italic" aria-label="italic">
-                        <FormatItalicIcon />
-                    </ToggleButton>
-                    <ToggleButton value="underlined" aria-label="underlined">
-                        <FormatUnderlinedIcon />
-                    </ToggleButton>
-                </ToggleButtonGroup>
+                    <ToggleButtonGroup
+                        value={formats}
+                        onChange={handleFormatChange}
+                        aria-label="text formatting"
+                    >
+                        <ToggleButton value="bold" aria-label="bold">
+                            <FormatBoldIcon />
+                        </ToggleButton>
+                        <ToggleButton value="italic" aria-label="italic">
+                            <FormatItalicIcon />
+                        </ToggleButton>
+                        <ToggleButton value="underlined" aria-label="underlined">
+                            <FormatUnderlinedIcon />
+                        </ToggleButton>
+                    </ToggleButtonGroup>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -211,17 +314,33 @@ export default function ButtonsDemo() {
             {/* Estados especiales */}
             <Box>
                 <Typography variant="h6" gutterBottom>Estados especiales</Typography>
-                <Stack direction="row" spacing={2} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
-                    <Button variant="contained" disabled>
-                        Deshabilitado
-                    </Button>
-                    <Button variant="outlined" disabled>
-                        Deshabilitado
-                    </Button>
-                    <Button variant="text" disabled>
-                        Deshabilitado
-                    </Button>
-                </Stack>
+                <CodeExample
+                    title="Botones deshabilitados"
+                    orientation="side"
+                    code={`<Stack direction="row" spacing={2} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
+  <Button variant="contained" disabled>
+      Deshabilitado
+  </Button>
+  <Button variant="outlined" disabled>
+      Deshabilitado
+  </Button>
+  <Button variant="text" disabled>
+      Deshabilitado
+  </Button>
+</Stack>`}
+                >
+                    <Stack direction="row" spacing={2} sx={{ mb: 2, flexWrap: 'wrap', gap: 1 }}>
+                        <Button variant="contained" disabled>
+                            Deshabilitado
+                        </Button>
+                        <Button variant="outlined" disabled>
+                            Deshabilitado
+                        </Button>
+                        <Button variant="text" disabled>
+                            Deshabilitado
+                        </Button>
+                    </Stack>
+                </CodeExample>
             </Box>
 
             <Divider />
@@ -229,14 +348,26 @@ export default function ButtonsDemo() {
             {/* Botón de upload */}
             <Box>
                 <Typography variant="h6" gutterBottom>Botón de carga de archivos</Typography>
-                <Button
-                    component="label"
-                    variant="contained"
-                    startIcon={<CloudUploadIcon />}
+                <CodeExample
+                    title="Botón de upload"
+                    orientation="side"
+                    code={`<Button
+  component="label"
+  variant="contained"
+  startIcon={<CloudUploadIcon />}>
+  Subir archivo
+  <input type="file" hidden />
+</Button>`}
                 >
-                    Subir archivo
-                    <input type="file" hidden />
-                </Button>
+                    <Button
+                        component="label"
+                        variant="contained"
+                        startIcon={<CloudUploadIcon />}
+                    >
+                        Subir archivo
+                        <input type="file" hidden />
+                    </Button>
+                </CodeExample>
             </Box>
         </Box>
     )

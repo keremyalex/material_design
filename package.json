@@ -16,7 +16,8 @@
     "@mui/icons-material": "^5.13.7",
     "@mui/lab": "^5.0.0-alpha.135",
     "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0"
+    "@emotion/styled": "^11.11.0",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "optionalDependencies": {},
   "devDependencies": {
